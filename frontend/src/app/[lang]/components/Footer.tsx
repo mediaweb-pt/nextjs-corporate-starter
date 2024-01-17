@@ -70,14 +70,12 @@ export default function Footer({
   logoUrl,
   logoText,
   menuLinks,
-  categoryLinks,
   legalLinks,
   socialLinks,
 }: {
   logoUrl: string | null;
   logoText: string | null;
   menuLinks: Array<FooterLink>;
-  categoryLinks: Array<CategoryLink>;
   legalLinks: Array<FooterLink>;
   socialLinks: Array<FooterLink>;
 }) {
@@ -90,15 +88,6 @@ export default function Footer({
             <Logo src={logoUrl}>
               {logoText && <h2 className="text-2xl font-bold">{logoText}</h2>}
             </Logo>
-          </div>
-
-          <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Categories</p>
-            <ul>
-              {categoryLinks.map((link: CategoryLink) => (
-                <CategoryLink key={link.id} {...link} />
-              ))}
-            </ul>
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
